@@ -65,7 +65,7 @@ a {
   column-gap: 18px;
   align-items: center;
 }
-.control__btn{
+.control__btn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -77,13 +77,13 @@ a {
   cursor: pointer;
   transition: 0.25s;
 }
-.control__btn:hover{
+.control__btn:hover {
   background: #2e80ce;
   border-color: #2e80ce;
   color: #fff;
 }
 
-.control-icon--next{
+.control-icon--next {
   rotate: 180deg;
 }
 
@@ -424,4 +424,49 @@ a {
   justify-content: center;
 }
 
-.con
+/* install ========================== */
+.install__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  height: 427px;
+  border-radius: 4px;
+  background: #2e80ce;
+  margin: 180px 0 85px;
+}
+.install__img {
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+}
+.install_content {
+  min-width: 586px;
+  margin-left: 444px;
+}
+
+.install__heading {
+  min-width: 489px;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2; /* 120% */
+  letter-spacing: -1px;
+}
+
+.install_desc {
+  margin-top: 18px;
+  max-width: 586px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.67; /* 166.667% */
+}
+.install__row {
+  margin-top: 38px;
+  display: flex;
+  column-gap: 28px;
+}
