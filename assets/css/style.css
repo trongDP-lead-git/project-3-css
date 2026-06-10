@@ -17,6 +17,13 @@ body {
 
 /* common ================================== */
 
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -129,6 +136,11 @@ a {
   top: -3px;
   right: 8px;
 }
+.header__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .header__action--signup {
   min-width: 144px;
@@ -214,7 +226,7 @@ a {
 }
 
 .section-desc {
-  width: 468px;
+  width: 550px;
   margin: 18px auto 0;
 }
 
@@ -277,6 +289,7 @@ a {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.75;
+  text-align: justify;
 }
 
 .service__btn {
@@ -289,6 +302,7 @@ a {
 }
 .work__desc {
   width: 468px;
+  line-height: 1.4;
 }
 .word__list {
   margin-top: 86px;
@@ -356,7 +370,9 @@ a {
   border-radius: 6px;
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.07);
   object-fit: cover;
+  position: relative;
   display: flex;
+  z-index: 1;
 }
 .about__img--small {
   width: 332px;
@@ -366,9 +382,14 @@ a {
   position: absolute;
   top: 121px;
   left: 238px;
+  z-index: 0;
 }
 .about-content__btn {
   margin-top: 38px;
+}
+.about__desc {
+  max-width: 468px;
+  text-align: justify;
 }
 /* team ======================================== */
 .team {
@@ -395,6 +416,7 @@ a {
   object-fit: cover;
   transition: 0.5s;
 }
+
 .team-item:hover .team-item__thumb {
   transform: scale(1.1);
 }
@@ -545,6 +567,7 @@ a {
   font-weight: 300;
   line-height: 1.72; /* 171.429% */
   margin-top: 10px;
+  text-align: justify;
 }
 .blog-item__more {
   display: inline-block;
@@ -558,18 +581,20 @@ a {
 }
 /* appointment ========================= */
 .appointment {
-  margin: 85px 0;
+  margin-top: 85px;
 }
 .appointment__inner {
   padding: 100px 178px;
   background: #f6fbff;
   text-align: center;
 }
-
+.appointment__heading {
+  font-size: 4.1rem;
+}
 .appointment__heading::after {
   content: "";
   display: block;
-  width: 136px;
+  width: 400px;
   height: 2px;
   background: #2e80ce;
   margin: 18px auto 0;
@@ -578,11 +603,128 @@ a {
   margin: 18px auto 0;
   max-width: 617px;
   color: #575f66;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.496rem;
+  text-align: justify;
   font-weight: 300;
-  line-height: 28px; /* 175% */
+  line-height: 1.75; /* 175% */
 }
 .appointment__btn {
   margin: 18px auto 0;
+}
+
+/* footer ======================== */
+.footer {
+  margin-top: 170px;
+  background: #10375c;
+  padding-top: 100px;
+  font-family: "Open Sans", "sans-serif";
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+.footer_desc {
+  margin-top: 21px;
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+.footer__list {
+  margin: 20px 0 28px;
+}
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+  white-space: nowrap;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__social--btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e80ce;
+  transition: 0.25s;
+}
+.footer__social {
+  display: flex;
+  column-gap: 10px;
+  margin: 20px 0 28px;
+}
+.footer__social--btn:hover {
+  background: #2e80ce;
+  color: #fff;
+}
+.footer__desc {
+  margin-top: 18px;
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+  text-align: justify;
+}
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+.footer-form__input {
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+.footer-form__input::placeholder {
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+.footer-form__submit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+  border: none;
+}
+.footer-form__submit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+.footer__copyright-text {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
 }
