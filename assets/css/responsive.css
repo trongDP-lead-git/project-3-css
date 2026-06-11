@@ -312,4 +312,10 @@
   .footer__column {
     margin-bottom: 30px;
   }
+  .work__desc {
+    width: 100%;
+  }
+  .team-item__thumb {
+    width: 100%;
+  }
 }
